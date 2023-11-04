@@ -27,6 +27,7 @@
       <li class="list-group-item">Item 2</li>
       <li class="list-group-item">Item 3</li>
       <li class="list-group-item">Item 4</li>
+      <li class="list-new-item">Item 5</li>
     </ul>
    </div>
   </div>
@@ -44,6 +45,12 @@
 
     var thirdItem=document.querySelector('.list-group-item:nth-child(3)');
     thirdItem.style.backgroundColor='green';
+
+    var item5=document.getElementsByClassName('list-new-item');
+    item5[0].innerText='Modified by getElementsByClassName';
+    
+    var item5Tag=document.getElementsByTagName('li');
+    item5Tag[4].innerText='Modified by getElementsByTagName';
   </script>
 </body>
 </html>
