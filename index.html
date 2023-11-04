@@ -27,7 +27,7 @@
       <li class="list-group-item">Item 2</li>
       <li class="list-group-item">Item 3</li>
       <li class="list-group-item">Item 4</li>
-      <li class="list-new-item">Item 5</li>
+      <li class="list-new-item list-group-item">Item 5</li>
     </ul>
    </div>
   </div>
@@ -43,14 +43,32 @@
         items[i].style.color='black';
     }
 
-    var thirdItem=document.querySelector('.list-group-item:nth-child(3)');
-    thirdItem.style.backgroundColor='green';
+    // var thirdItem=document.querySelector('.list-group-item:nth-child(3)');
+    // thirdItem.style.backgroundColor='green';
 
     var item5=document.getElementsByClassName('list-new-item');
     item5[0].innerText='Modified by getElementsByClassName';
     
     var item5Tag=document.getElementsByTagName('li');
     item5Tag[4].innerText='Modified by getElementsByTagName';
+
+    var secondItem=document.querySelector('.list-group-item:nth-child(2)');
+    secondItem.style.backgroundColor='green';
+
+    var thirdItem=document.querySelector('.list-group-item:nth-child(3)');
+    thirdItem.style.visibility='hidden';
+
+    var secondItemAll=document.querySelectorAll('.list-group-item');
+    secondItemAll[1].style.color='green';
+    secondItemAll[1].style.backgroundColor='white';
+
+    var oddElements=document.querySelectorAll('.list-group-item:nth-child(odd)');
+    for (let i=0;i<oddElements.length;i++)
+    {
+        oddElements[i].style.backgroundColor='green';
+    }
+
+
   </script>
 </body>
 </html>
